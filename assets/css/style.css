@@ -1,0 +1,32 @@
+main {
+    display: flex;
+}
+
+.futureForecast {
+    display: flex;
+    flex-direction: row;
+}
+
+.locationSearchSection  {
+    margin-right:30px;
+    display: flex;
+    flex-direction: column;
+}
+.locationSearchSection form {
+    display: flex;
+    flex-direction: column;
+}
+.weatherViewSection {
+    margin-right: 80px;
+    flex-grow: 1;
+}
+.futureDayForecastBlock {
+    width: 100px;
+    height: 170px;
+    background-color: darkblue;
+    color: white;
+}
+
+.currentForecast {
+    border: black solid 1px;
+}
