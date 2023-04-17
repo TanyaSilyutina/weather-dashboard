@@ -5,6 +5,7 @@ main {
 .futureForecast {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .locationSearchSection  {
@@ -21,7 +22,7 @@ main {
     flex-grow: 1;
 }
 .futureDayForecastBlock {
-    width: 100px;
+    width: 150px;
     height: 170px;
     background-color: darkblue;
     color: white;
@@ -30,3 +31,4 @@ main {
 .currentForecast {
     border: black solid 1px;
 }
+
