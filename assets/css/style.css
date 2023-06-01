@@ -1,29 +1,29 @@
-main {
-    display: flex;
-}
+/*main {*/
+/*    display: flex;*/
+/*}*/
 
-.futureForecast {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+/*.futureForecast {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-between;*/
+/*}*/
 
-.locationSearchSection  {
-    margin-right:30px;
-    display: flex;
-    flex-direction: column;
-}
-.locationSearchSection form {
-    display: flex;
-    flex-direction: column;
-}
-.weatherViewSection {
-    margin-right: 80px;
-    flex-grow: 1;
-}
+/*.locationSearchSection  {*/
+/*    margin-right:30px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+/*.locationSearchSection form {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+/*.weatherViewSection {*/
+/*    margin-right: 80px;*/
+/*    flex-grow: 1;*/
+/*}*/
 .futureDayForecastBlock {
-    width: 150px;
-    height: 170px;
+    /*width: 150px;*/
+    /*height: 170px;*/
     background-color: darkblue;
     color: white;
 }
@@ -32,3 +32,6 @@ main {
     border: black solid 1px;
 }
 
+* {
+    font-family: Serif, sans-serif;
+}

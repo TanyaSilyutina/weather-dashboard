@@ -1,8 +1,13 @@
-let locationEl = document.getElementById("location");
-let locationBtnEl = document.getElementById("locationBtn");
-let currentCityEl = document.querySelector(".currentLocation");
-let currentDateEl = document.querySelector(".currentDate");
+const locationEl = document.getElementById("location");
+const locationBtnEl = document.getElementById("locationBtn");
+const currentCityEl = document.querySelector(".currentLocation");
+const currentDateEl = document.querySelector(".currentDate");
+const currentTempEl = document.querySelector(".currentTemp");
+const currentWindEl = document.querySelector(".currentWind");
+const currentHumidityEl = document.querySelector(".currentHumidity");
+const previousSearchesEl = document.querySelector(".previousSearches");
 const previousSearches = [];
+const searchDivEl = document.querySelector(".previousSearches");
 
 async function getCoordinatesByName(userInput) {
     let url = "http://api.openweathermap.org/geo/1.0/direct?";
@@ -57,6 +62,14 @@ function getCoordsFromQuery(userInput){
     }
 }
 
+function addWeatherBtn(city) {
+    // create a new btn element
+    const cityBtn = document.createElement("button");
+    cityBtn.textContent = city;
+    const searchDivEl = document.querySelector(".previousSearches");
+    searchDivEl.append(cityBtn);
+}
+
 async function getWeather(e){
     e.preventDefault();
     let userInput = await getCoordsFromQuery(locationEl.value);
@@ -71,29 +84,37 @@ async function getWeather(e){
     });
     weatherUrl += params.toString();
     console.log(weatherUrl);
+
     const response = await fetch(weatherUrl);
     // Check if response was actually loaded successfully. If not log the whole object.
     if (!response.ok) {
         console.log(response);
         return;
     }
-    // continue assigning to display
-    // clone future time blocks
-    // make local storage
+
     const data = await response.json();
-    let cityName = data.city.name;
+    const cityName = data.city.name;
     console.log(cityName);
     currentCityEl.textContent = cityName;
-    let date = data.list[0].dt_txt;
+    addWeatherBtn(cityName);
+
+    const date = data.list[0].dt_txt;
     console.log(date);
     currentDateEl.textContent = date;
-    let temp = data.list[0].main.temp;
+
+    const temp = data.list[0].main.temp;
     console.log(temp);
-    let wind = data.list[0].wind.speed;
+    currentTempEl.textContent = temp;
+
+    const wind = data.list[0].wind.speed;
     console.log(wind);
-    let humidity = data.list[0].main.humidity;
+    currentWindEl.textContent = wind;
+
+    const humidity = data.list[0].main.humidity;
     console.log(humidity);
+    currentHumidityEl.textContent = humidity;
 }
+
 
 locationBtnEl.addEventListener("click", getWeather);
 
