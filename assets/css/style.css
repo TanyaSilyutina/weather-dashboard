@@ -12,3 +12,7 @@
 * {
     font-family: Serif, sans-serif;
 }
+
+.hidden {
+    display: none;
+}

@@ -67,9 +67,9 @@ async function getCoordinatesByName(userInput) {
 }
 
 async function renderPage(city) {
-    futureForecastEl.classList.remove("d-none");
-    previousSearchesEl.classList.remove("d-none");
-    weatherViewSectionEl.classList.remove("d-none");
+    futureForecastEl.classList.remove("hidden");
+    previousSearchesEl.classList.remove("hidden");
+    weatherViewSectionEl.classList.remove("hidden");
 
     let searchedCity = await getCoordinatesByName(city);
     console.log(searchedCity.lat);
