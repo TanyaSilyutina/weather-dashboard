@@ -10,7 +10,7 @@ Deployed to [GitHub Pages](https://tanyasilyutina.github.io/weather-dashboard/)
 
 ## Usage
 
-Searching for a city opens application's interface, which displays weather for the next 5 days. 
+Searching for a city opens application's interface, which displays weather for the next 5 days. 'Previous Searches' section allows users to access their previous queries.
 
 ![App Interface](/assets/interface.png)
 
