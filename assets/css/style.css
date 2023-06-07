@@ -1,30 +1,7 @@
-/*main {*/
-/*    display: flex;*/
-/*}*/
-
-/*.futureForecast {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-between;*/
-/*}*/
-
-/*.locationSearchSection  {*/
-/*    margin-right:30px;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
-/*.locationSearchSection form {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
-/*.weatherViewSection {*/
-/*    margin-right: 80px;*/
-/*    flex-grow: 1;*/
-/*}*/
 .futureDayForecastBlock {
     /*width: 150px;*/
     /*height: 170px;*/
-    background-color: darkblue;
+    background-color: lightslategrey;
     color: white;
 }
 
