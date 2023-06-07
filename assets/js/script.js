@@ -43,7 +43,7 @@ const futureIconEl5 = document.querySelector(".futureIcon5");
 
 
 async function getCoordinatesByName(userInput) {
-    let url = "http://api.openweathermap.org/geo/1.0/direct?";
+    let url = "https://api.openweathermap.org/geo/1.0/direct?";
     const params = new URLSearchParams({
         q: userInput,
         appid: "d5039772842e201a8402984e0a92e4eb"
